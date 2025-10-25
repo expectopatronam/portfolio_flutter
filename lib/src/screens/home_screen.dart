@@ -63,8 +63,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: _currentPage == index
-                          ? Colors.black
-                          : Colors.grey.shade400,
+                          ? const Color(0xFF6366F1)
+                          : const Color(0xFF6366F1).withValues(alpha: 0.3),
+                      boxShadow: _currentPage == index
+                          ? [
+                              BoxShadow(
+                                color: const Color(0xFF6366F1).withValues(alpha: 0.5),
+                                blurRadius: 8,
+                                spreadRadius: 1,
+                              ),
+                            ]
+                          : null,
                     ),
                   );
                 }),
