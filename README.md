@@ -95,7 +95,7 @@ web/
 The app is configured to work with GitHub Pages subdirectory structure. The base href is set to `/portfolio_flutter/` in the deployment workflow.
 
 ### Flutter Version
-The GitHub Actions workflow uses Flutter 3.24.0. You can update this in `.github/workflows/deploy.yml` if needed.
+The GitHub Actions workflow uses Flutter 3.24.0 (Dart 3.5). Ensure your local environment is compatible. You can update this in `.github/workflows/deploy.yml` if needed.
 
 ## 📝 Notes
 
