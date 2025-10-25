@@ -110,16 +110,24 @@ The GitHub Actions workflow uses Flutter 3.24.0. You can update this in `.github
 - Check that all dependencies are properly declared in `pubspec.yaml`
 - Ensure Flutter SDK version compatibility
 - Review GitHub Actions logs for specific error messages
+- If the main workflow fails, try the alternative workflow by renaming `.github/workflows/deploy-alternative.yml` to `.github/workflows/deploy.yml`
 
 ### Deployment Issues
 - Verify GitHub Pages is enabled in repository settings
 - Check that the workflow has proper permissions
 - Ensure the `GITHUB_TOKEN` has necessary permissions
+- Make sure you're using the correct repository name in the base-href (should match your repository name)
+
+### Common GitHub Actions Issues
+1. **Permission Errors**: Make sure GitHub Pages is enabled in repository settings
+2. **Build Failures**: Check Flutter version compatibility
+3. **Deployment Failures**: Verify the workflow has write permissions to the repository
 
 ### Local Development Issues
 - Run `flutter doctor` to check Flutter installation
 - Clear Flutter cache: `flutter clean && flutter pub get`
 - Check web browser console for runtime errors
+- Test the build command: `flutter build web --release --base-href="/portfolio_flutter/"`
 
 ## 📄 License
 
